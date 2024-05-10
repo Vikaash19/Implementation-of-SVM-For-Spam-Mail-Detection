@@ -30,8 +30,6 @@ x.shape
 y.shape
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.35,random_state=0)
 x_train
-```
-```
 x_train.shape
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer()
@@ -39,6 +37,8 @@ x_train=cv.fit_transform(x_train)
 x_test=cv.transform(x_test)
 from sklearn.svm import SVC
 svc=SVC()
+```
+```
 svc.fit(x_train,y_train)
 y_pred=svc.predict(x_test)
 y_pred
